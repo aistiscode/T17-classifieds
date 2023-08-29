@@ -3,6 +3,7 @@ header{
     justify-content: space-between;
     align-items: center; 
     border: 1px solid black;
+    margin-bottom: 8vh;
 }
 
 header>nav>ul{

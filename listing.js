@@ -18,7 +18,6 @@ const getSelectedListing = async function(){
     description.textContent = listingData.description;
     listingContainer.append(description);
 
-    const location = document.createElement()
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "DELETE";

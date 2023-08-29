@@ -7,12 +7,17 @@ const getListings = async function(){
         Method: "GET"
     });
     const parsedListings = await listings.json();
+
+    //sorting listings
+    parsedListings.sort((a, b) => a.price - b.price);
+    
+
     parsedListings.forEach(listing => {
         const listingCard = document.createElement("a");
         listingCard.setAttribute("class", "listing");
         listingCard.href = "listing.html";
         listingCard.addEventListener("click", function(){
-            localStorage.setItem("listingId", listing.id);
+        localStorage.setItem("listingId", listing.id);
         })
         
         /*
@@ -26,16 +31,22 @@ const getListings = async function(){
         const listingImage = document.createElement("img");
         listingImage.src = "https://m.media-amazon.com/images/I/91AswJPf5TL.jpg";
         
-        const title = document.createElement("p");
+        const listingData = document.createElement("div");
+        listingData.setAttribute("class", "listingdata");
+
+        const title = document.createElement("h3");
         title.textContent = listing.title;
 
         const price = document.createElement("p");
         price.textContent = listing.price;
 
         //APPENDING
+        listingData.append(title);
+        listingData.append(price);
+        
         listingCard.append(listingImage);
-        listingCard.append(title);
-        listingCard.append(price);
+        listingCard.append(listingData);
+        
         
         listingsContainer.append(listingCard);
         

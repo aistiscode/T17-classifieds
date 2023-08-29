@@ -5,9 +5,19 @@ main{
 
 .listing{
     display: flex;
+    gap: 1rem;
     background-color: grey;
+    text-decoration: none;
 }
 
 .listing>img{
     max-width: 200px;
+}
+
+.listingdata{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: darkgreen;
 }

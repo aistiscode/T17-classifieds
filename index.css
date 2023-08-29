@@ -1,0 +1,13 @@
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.listing{
+    display: flex;
+    background-color: grey;
+}
+
+.listing>img{
+    max-width: 200px;
+}

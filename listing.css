@@ -1,4 +1,10 @@
+main{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
 #deletebtn{
-    padding: 2rem;
+    padding: 1rem 2rem;
     background-color: red;
 }

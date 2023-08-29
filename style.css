@@ -4,3 +4,8 @@ header{
     align-items: center; 
     border: 1px solid black;
 }
+
+header>nav>ul{
+    display: flex;
+    gap: 20px;
+}

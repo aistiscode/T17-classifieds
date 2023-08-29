@@ -1,0 +1,13 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>input{
+    width: 90%;
+}
+
+main>button{
+    width: 30%;
+}

@@ -5,7 +5,26 @@ const descriptionInput = document.getElementById("description");
 const locationInput = document.getElementById("location");
 const submitBtn = document.querySelector("button");
 
+const validateListingForm = ()=>{
+  if(!titleInput.value){
+    throw new Error("Title is required");
+  }
+  if(!priceInput.value){
+    throw new Error("Price is required");
+  }
+  if(!imgUrlInput.value){
+    throw new Error("Image URL is required");
+  }
+  if(!descriptionInput.value){
+    throw new Error("Description is required");
+  }
+  if(!locationInput.value){
+    throw new Error("Location is required");
+  }
+};
+
 const getListingObject = ()=>{
+  validateListingForm();
   return {
     title: titleInput.value,
     price: priceInput.value,
@@ -31,9 +50,3 @@ const addListing = async ()=>{
 };
 
 submitBtn.addEventListener("click", addListing);
-
-const validation = ()=>{
-    if(titleInput.value){
-        console.log("IT'S THERE");
-    }
-}

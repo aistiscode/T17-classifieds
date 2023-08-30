@@ -1,4 +1,4 @@
-console.log(localStorage.getItem("listingId"));
+//CONSIDER IF THIS SHOULD BE ADDED INTO getSelectedListing
 const listingContainer = document.getElementById("listingcontainer");
 
 const getSelectedListing = async function(){
@@ -11,15 +11,30 @@ const getSelectedListing = async function(){
     image.alt = "Image of listed product";
     listingContainer.append(image);
 
+    const listingInfoContainer = document.createElement("div");
+    listingInfoContainer.setAttribute("id", "listinginfocontainer");
+    
+
     const title = document.createElement("h1");
     title.textContent = listingData.title;
-    listingContainer.append(title);
+    listingInfoContainer.append(title);
 
     const description = document.createElement("p");
     description.textContent = listingData.description;
-    listingContainer.append(description);
+    listingInfoContainer.append(description);
+
+    const price = document.createElement("p");
+    price.textContent = listingData.price;
+    listingInfoContainer.append(price);
+
+    const location = document.createElement("p");
+    location.textContent = listingData.location;
+    listingInfoContainer.append(location);
+
+    listingContainer.append(listingInfoContainer);
 
     const deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute("id", "deletebtn");
     deleteBtn.textContent = "DELETE";
     deleteBtn.addEventListener("click", async ()=>{
       try{
@@ -32,7 +47,7 @@ const getSelectedListing = async function(){
       }
     });
 
-    listingContainer.append(deleteBtn);
+    listingInfoContainer.append(deleteBtn);
   } catch(error){
     console.error("Error fetching selected listing:", error);
   }

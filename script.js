@@ -1,6 +1,6 @@
 const listingsContainer = document.getElementById("listingscontainer");
 
-const getListings = async function () {
+const getListings = async function() {
   try {
     const listings = await fetch("https://64ec4b1af9b2b70f2bfa0da0.mockapi.io/listings", {
       method: "GET"
@@ -10,16 +10,16 @@ const getListings = async function () {
     parsedListings.sort((a, b) => a.price - b.price);
 
 
-    parsedListings.forEach(listing => {
+    parsedListings.forEach(listing =>{
       const listingCard = document.createElement("a");
       listingCard.setAttribute("class", "listing");
       listingCard.href = "listing.html";
-      listingCard.addEventListener("click", function () {
+      listingCard.addEventListener("click", function() {
         localStorage.setItem("listingId", listing.id);
       });
 
       const listingImage = document.createElement("img");
-      listingImage.src = "https://m.media-amazon.com/images/I/91AswJPf5TL.jpg";
+      listingImage.src = listing.img_url;
 
       const listingData = document.createElement("div");
       listingData.setAttribute("class", "listingdata");

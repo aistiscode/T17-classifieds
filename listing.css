@@ -4,7 +4,23 @@ main{
     flex-direction: column;
 }
 
+#listingcontainer{
+    display: flex;
+}
+
+#listinginfocontainer{
+    display: flex;
+    flex-direction: column;
+}
+
 #deletebtn{
+    
     padding: 1rem 2rem;
     background-color: red;
+    
+}
+
+#redirect{
+    display: flex;
+    justify-content: center;
 }

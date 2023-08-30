@@ -31,3 +31,9 @@ const addListing = async ()=>{
 };
 
 submitBtn.addEventListener("click", addListing);
+
+const validation = ()=>{
+    if(titleInput.value){
+        console.log("IT'S THERE");
+    }
+}

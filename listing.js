@@ -21,7 +21,13 @@ const getSelectedListing = async function(){
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "DELETE";
-    
+    deleteBtn.addEventListener("click", async()=>{
+        const response = await fetch("https://64ec4b1af9b2b70f2bfa0da0.mockapi.io/listings/" + localStorage.getItem("listingId"),{
+            method: "DELETE"
+        });
+        listingContainer.textContent = "LISTING HAS BEEN REMOVED.";
+    })
+
     listingContainer.append(deleteBtn);
     console.log(listingData);
 }

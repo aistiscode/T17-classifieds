@@ -1,3 +1,4 @@
+const submitStatusContainer = document.getElementById("submitstatuscontainer");
 const titleInput = document.getElementById("title");
 const priceInput = document.getElementById("price");
 const imgUrlInput = document.getElementById("imgurl");
@@ -44,7 +45,10 @@ const addListing = async ()=>{
       },
       body: JSON.stringify(getListingObject())
     });
+    submitStatusContainer.textContent = "ADDED NEW LISTING.";
   } catch (err){
+    
+    submitStatusContainer.textContent = "FAILED TO ADD NEW LISTING. TRY AGAIN LATER.";
     console.log("Encountered error while adding listing:", err);
   }
 };

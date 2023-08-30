@@ -32,11 +32,11 @@ main{
     flex: 1;
 }
 
-@media screen and (min-width: 600px) {
-    body{
-        #listingscontainer{
+@media screen and (min-width: 768px) {
+    body #listingscontainer{
+        
             margin: auto;
             width: 70%;
-        }
+        
     }
 }

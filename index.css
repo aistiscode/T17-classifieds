@@ -4,7 +4,14 @@ main{
 }
 
 main>h1{
-    margin: auto;
+    align-self: center;
+    color: darkorange;
+}
+
+a{
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .listing{

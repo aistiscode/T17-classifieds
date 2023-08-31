@@ -27,10 +27,14 @@ const getListings = async function() {
       const title = document.createElement("h3");
       title.textContent = listing.title;
 
-      const price = document.createElement("p");
-      price.textContent = listing.price;
+      const location = document.createElement("span");
+      location.textContent = "Location: " + listing.location;
+
+      const price = document.createElement("span");
+      price.textContent = "Price: " + listing.price + " USD";
 
       listingData.append(title);
+      listingData.append(location);
       listingData.append(price);
 
       listingCard.append(listingImage);

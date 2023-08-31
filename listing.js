@@ -24,11 +24,11 @@ const getSelectedListing = async function(){
     listingInfoContainer.append(description);
 
     const price = document.createElement("p");
-    price.textContent = listingData.price + " EUR";
+    price.textContent = "Price: " + listingData.price + " USD";
     listingInfoContainer.append(price);
 
     const location = document.createElement("p");
-    location.textContent = listingData.location;
+    location.textContent = "Location: " + listingData.location;
     listingInfoContainer.append(location);
 
     listingContainer.append(listingInfoContainer);

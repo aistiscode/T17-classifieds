@@ -3,6 +3,10 @@ main{
     flex-direction: column;
 }
 
+main>h1{
+    margin: auto;
+}
+
 .listing{
     display: flex;
     gap: 1rem;
@@ -22,7 +26,7 @@ main{
     
         width: 10rem;
         height: 10rem;
-        object-fit: cover;
+        object-fit: contain;
 }
 
 .listingdata{
@@ -30,6 +34,15 @@ main{
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
+    padding-bottom: 1rem;
+}
+
+.listingdata>h3{
+    margin: 0.5rem;
+}
+
+.listingdata>span{
+    padding-left: 4rem;
 }
 
 @media screen and (min-width: 768px) {

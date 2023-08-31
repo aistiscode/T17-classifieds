@@ -45,6 +45,13 @@ const addListing = async ()=>{
       },
       body: JSON.stringify(getListingObject())
     });
+    //clearing input fields after submission
+    titleInput.value = "";
+    priceInput.value = "";
+    imgUrlInput.value = "";
+    descriptionInput.value = "";
+    locationInput.value = "";
+
     submitStatusContainer.textContent = "ADDED NEW LISTING.";
   } catch (err){
     

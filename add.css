@@ -7,11 +7,12 @@ main{
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f8f8f8;
-    padding: 2rem 0;
+    padding-top: 1rem;
 }
 
 main>h1{
     font-size: 1.8rem;
+    color: darkorange;
 }
 
 main>input{
@@ -22,6 +23,7 @@ main>input{
 main>button{
     width: 91.5%;
     padding: 0.5rem 0;
+    background-color: darkorange;
 }
 
 @media screen and (min-width: 768px){
